@@ -31,7 +31,7 @@ class AlimentosController < ApplicationController
 	end
 	
 	def categoria_regiao_especifica
-		categoria = Alimento.find_by(categoria: params[:categoria])
-    	render json: {status: 'SUCCESS', message:'Alimentos Categoria:', data:categoria},status: :ok
+		categoria_regiao = Alimento.find_by(categoria: params[:categoria], regiao: params[:regiao])
+    	render json: {status: 'SUCCESS', message:'Alimentos Categoria Regiao:', data:categoria_regiao},status: :ok
 	end
 end
