@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   
   get 'alimentos/regiao/:regiao', to: 'alimentos#regiao_especifica', param: :regiao
   get 'alimentos/categoria/:categoria', to: 'alimentos#categoria_especifica', param: :categoria
-  
   get 'alimentos/:categoria/:regiao', to: 'alimentos#categoria_regiao_especifica'
   
 end
