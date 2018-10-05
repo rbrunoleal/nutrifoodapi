@@ -10,12 +10,28 @@ class AlimentosController < ApplicationController
 	end
 	
 	def categoria
-		categoria = Alimento.select('nome')
+		categoria = Alimento.select('categoria')
     	render json: {status: 'SUCCESS', message:'Categorias:', data:categoria},status: :ok
 	end
 	
 	def regiao
-		regiao = Alimento.select('regiao').select('regiao')
+		regiao = Alimento.select('regiao')
     	render json: {status: 'SUCCESS', message:'Regioes:', data:regiao},status: :ok
+	end
+	
+	
+	def regiao_especifica
+		regiao = Alimento.find_by(regiao: params[:regiao])
+    	render json: {status: 'SUCCESS', message:'Alimentos Regiao:', data:regiao},status: :ok
+	end
+	
+	def categoria_especifica
+		categoria = Alimento.find_by(categoria: params[:categoria])
+    	render json: {status: 'SUCCESS', message:'Alimentos Categoria:', data:categoria},status: :ok
+	end
+	
+	def categoria_regiao_especifica
+		categoria = Alimento.find_by(categoria: params[:categoria])
+    	render json: {status: 'SUCCESS', message:'Alimentos Categoria:', data:categoria},status: :ok
 	end
 end

@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   resources :alimentos, only: [:index, :show]
   get '/categorias', to: 'alimentos#categoria'
   get '/regioes', to: 'alimentos#regiao'
+  
+  get 'alimentos/regiao/:regiao', to: 'alimentos#regiao_especifica', param: :regiao
+  get 'alimentos/categoria/:categoria', to: 'alimentos#categoria_especifica', param: :categoria
 end
