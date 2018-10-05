@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  nome_cientifico: MyString
+  nome_popular: MyString
+  origem: MyString
+  regiao: MyString
+  categoria: MyString
+  caracteristicas: MyText
+  culinaria: MyText
+  curiosidade: MyText
+  energia_kcal: MyString
+  proteinas_g: MyString
+  carboidratos_g: MyString
+  fibra_g: MyString
+
+two:
+  nome: MyString
+  nome_cientifico: MyString
+  nome_popular: MyString
+  origem: MyString
+  regiao: MyString
+  categoria: MyString
+  caracteristicas: MyText
+  culinaria: MyText
+  curiosidade: MyText
+  energia_kcal: MyString
+  proteinas_g: MyString
+  carboidratos_g: MyString
+  fibra_g: MyString
