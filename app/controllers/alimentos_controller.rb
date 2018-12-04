@@ -10,12 +10,14 @@ class AlimentosController < ApplicationController
 	end
 	
 	def categoria
-		categoria = Alimento.select('categoria')
+		#categoria = Alimento.select('categoria')
+		categoria = Alimento.select(:categoria).map(&:categoria).uniq
     	render json: {status: 'SUCCESS', message:'Categorias:', data:categoria},status: :ok
 	end
 	
 	def regiao
-		regiao = Alimento.select('regiao')
+		#regiao = Alimento.select('regiao')
+		regiao = Alimento.select(:regiao).map(&:regiao).uniq
     	render json: {status: 'SUCCESS', message:'Regioes:', data:regiao},status: :ok
 	end
 	
