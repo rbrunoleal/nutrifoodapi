@@ -14,7 +14,15 @@ class CreateAlimentos < ActiveRecord::Migration[5.2]
       t.string :proteinas_g
       t.string :carboidratos_g
       t.string :fibra_g
-
+      t.string :lipideos_g
+      t.string :calcio_mg
+      t.string :fosforo_mg
+      t.string :ferro_mg
+      t.string :retinol_mg
+      t.string :vitb1_mg
+      t.string :vitb2_mg
+      t.string :vitc_mg
+      t.string :niacina_mg
       t.timestamps
     end
   end

@@ -26,6 +26,15 @@ ActiveRecord::Schema.define(version: 2018_10_05_114132) do
     t.string "proteinas_g"
     t.string "carboidratos_g"
     t.string "fibra_g"
+    t.string "lipideos_g"
+    t.string "calcio_mg"
+    t.string "fosforo_mg"
+    t.string "ferro_mg"
+    t.string "retinol_mg"
+    t.string "vitb1_mg"
+    t.string "vitb2_mg"
+    t.string "vitc_mg"
+    t.string "niacina_mg"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
