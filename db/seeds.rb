@@ -2833,9 +2833,9 @@ Alimento.create!(
 Alimento.create!(
     [{
         nome: "FARINHA DE TAPIOCA",
-    	nome_cientifico: "",
-        nome_popular: "",
-        origem: "",
+    	nome_cientifico: "null",
+        nome_popular: "null",
+        origem: "null",
         regiao: "Nordeste",
         categoria: "Farinhas e preparações",
         caracteristicas: "a tapioca, também conhecida como beiju, é uma iguaria tipicamente
