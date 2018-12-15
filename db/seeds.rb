@@ -3594,7 +3594,7 @@ Alimento.create!(
         proteinas_g: "0,8",
         lipideos_g: "0,3",
         carboidratos_g: "27,2",
-        fibra_g: "",
+        fibra_g: "0",
         calcio_mg: "0",
         fosforo_mg: "0",
         ferro_mg: "0",
