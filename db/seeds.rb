@@ -4009,7 +4009,7 @@ Alimento.create!(
         nome_popular: "Mangarito, mangará, tayaó (guarani), malangay e tannia",
         origem: "Regiões tropicais das Américas do Sul e Central, do Brasil ao México",
         regiao: "Centro-Oeste",
-        categoria: "Turbérculos, raízes e cereais",
+        categoria: "Tubérculos, raízes e cereais",
         caracteristicas: "Muito apreciado no passado, é pouco conhecido atualmente. Ainda
         é encontrado esporadicamente em feiras nas cidades do interior de Minas Gerais e Goiás. Tem
         aumentado a produção na região de Joinville, Santa Catarina. A planta é semelhante à taioba,
