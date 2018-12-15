@@ -4047,7 +4047,7 @@ Alimento.create!(
         nome_popular: "Milho",
         origem: "América Central",
         regiao: "Centro-Oeste",
-        categoria: "Turbérculos, raízes e cereais",
+        categoria: "Tubérculos, raízes e cereais",
         caracteristicas: "O milho é uma planta que apresenta grande capacidade de adaptação
         a diversos climas, sendo plantado em praticamente todas as regiões do mundo, nos hemisférios
         norte e sul, ao nível do mar e em regiões montanhosas, em climas úmidos e regiões secas. É rico em
