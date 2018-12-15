@@ -1271,9 +1271,9 @@ matrizes sem poda de flores para produção das vagens e das sementes para o pr�
 Alimento.create!(
     [{
         nome: "FARINHA DE CARIMÃ",
-    	nome_cientifico: "",
-        nome_popular: "",
-        origem: "",
+    	nome_cientifico: "null",
+        nome_popular: "null",
+        origem: "null",
         regiao: "Norte",
         categoria: "Farinhas e preparações",
         caracteristicas: "É um tipo de farinha extraída da mandioca mansa (macaxeira ou aipim).
@@ -1302,9 +1302,9 @@ na lama ou deixando-a imergida em águas paradas de açudes por até oito dias."
     },
     {
         nome: "FARINHA DE PIRACUÍ",
-    	nome_cientifico: "",
-        nome_popular: "",
-        origem: "",
+    	nome_cientifico: "null",
+        nome_popular: "null",
+        origem: "null",
         regiao: "Norte",
         categoria: "Farinhas e preparações",
         caracteristicas: "Piracuí é uma farinha feita de peixe produzida a partir do beneficiamento
@@ -1340,9 +1340,9 @@ pelo beneficiamento do piracuí.",
     },
     {
         nome: "FARINHA DE UARINI",
-    	nome_cientifico: "",
-        nome_popular: "",
-        origem: "",
+    	nome_cientifico: "null",
+        nome_popular: "null",
+        origem: "null",
         regiao: "Norte",
         categoria: "Farinhas e preparações",
         caracteristicas: "A farinha de uarini é considerada o caviar do gênero das farinhas. Vem
@@ -1372,9 +1372,9 @@ peixe.",
     },
     {
         nome: "MANIÇOBA",
-    	nome_cientifico: "",
-        nome_popular: "",
-        origem: "",
+    	nome_cientifico: "null",
+        nome_popular: "null",
+        origem: "null",
         regiao: "Norte",
         categoria: "Farinhas e preparações",
         caracteristicas: "A maniçoba é um dos pratos típicos da culinária brasileira, mais
@@ -1404,9 +1404,9 @@ Vigia de Nazaré e outros).",
     },
     {
         nome: "TUCUPI",
-    	nome_cientifico: "",
-        nome_popular: "",
-        origem: "",
+    	nome_cientifico: "null",
+        nome_popular: "null",
+        origem: "null",
         regiao: "Norte",
         categoria: "Farinhas e preparações",
         caracteristicas: "Durante o processo de fabricação da farinha, as raízes de mandioca são
