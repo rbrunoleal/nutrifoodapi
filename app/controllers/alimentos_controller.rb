@@ -10,27 +10,27 @@ class AlimentosController < ApplicationController
 	end
 	
 	def categoria
-		categoria = Alimento.select(:categoria).map(&:categoria).uniq
+		categoria = Alimento.order('categoria').select(:categoria).map(&:categoria).uniq
     	render json: {status: 'SUCCESS', message:'Categorias:', data:categoria},status: :ok
 	end
 	
 	def regiao
-		regiao = Alimento.select(:regiao).map(&:regiao).uniq
+		regiao = Alimento.order('regiao').select(:regiao).map(&:regiao).uniq
     	render json: {status: 'SUCCESS', message:'Regioes:', data:regiao},status: :ok
 	end
 	
 	def regiao_especifica
-		regiao_esp = Alimento.where("regiao = :regiao", { regiao: params[:regiao] })
+		regiao_esp = Alimento.order('nome').where("regiao = :regiao", { regiao: params[:regiao] })
     	render json: {status: 'SUCCESS', message:'Alimentos Regiao:', data:regiao_esp},status: :ok
 	end
 	
 	def categoria_especifica
-		categoria_esp = Alimento.where("categoria = :categoria", { categoria: params[:categoria] })
+		categoria_esp = Alimento.order('nome').where("categoria = :categoria", { categoria: params[:categoria] })
     	render json: {status: 'SUCCESS', message:'Alimentos Categoria:', data:categoria_esp},status: :ok
 	end
 	
 	def categoria_regiao_especifica
-		categoria_regiao = Alimento.where("categoria = :categoria and regiao = :regiao", { categoria: params[:categoria], regiao: params[:regiao] })
+		categoria_regiao = Alimento.order('nome').where("categoria = :categoria and regiao = :regiao", { categoria: params[:categoria], regiao: params[:regiao] })
     	render json: {status: 'SUCCESS', message:'Alimentos Categoria Regiao:', data:categoria_regiao},status: :ok
 	end
 end
