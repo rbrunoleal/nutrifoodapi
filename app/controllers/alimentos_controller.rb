@@ -1,3 +1,6 @@
+require 'uri'
+
+
 class AlimentosController < ApplicationController 
 	def index
 		alimentos = Alimento.order('nome');
@@ -25,7 +28,9 @@ class AlimentosController < ApplicationController
 	end
 	
 	def categoria_especifica
-		categoria_esp = Alimento.order('nome').where("categoria = :categoria", { categoria: params[:categoria] })
+		ded = URI.decode(params[:categoria]);
+		ded.gsub! '+', ' '
+		categoria_esp = Alimento.order('nome').where("categoria = :categoria", { categoria: ded })
     	render json: {status: 'SUCCESS', message:'Alimentos Categoria:', data:categoria_esp},status: :ok
 	end
 	
