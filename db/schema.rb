@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2018_10_05_114132) do
     t.string "vitb2_mg"
     t.string "vitc_mg"
     t.string "niacina_mg"
+    t.string "imagem"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

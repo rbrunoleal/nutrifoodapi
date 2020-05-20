@@ -1,4 +1,4 @@
-class Alimento < ApplicationRecord
+class Alimento < ApplicationRecord  
     validates :nome, presence: true  #Especifico
     validates :nome_cientifico, presence: true
     validates :nome_popular, presence: true

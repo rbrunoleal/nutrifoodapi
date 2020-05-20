@@ -1,8 +1,7 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
-# Examples:
-#
+# Examples:#
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
@@ -18,16 +17,9 @@ Alimento.create!(
         origem: "América do Sul",
         regiao: "Norte",
         categoria: "Frutas",
-        caracteristicas: "É cultivado nos igapós e margens inundáveis de rios na região Amazônica,
-principalmente no estado do Pará. Árvore de porte médio, podendo atingir 20 m de altura, o
-abricó se propaga com facilidade por meio de sementes, que germinam entre 12 e 18 dias. A planta
-pode iniciar a floração a partir de seis/oito anos.",
-        culinaria: "O fruto é consumido in natura, em forma de salada, licores, compotas,
-geleias e sucos, ou processado.",
-        curiosidade: "A árvore é empregada na arborização urbana e na medicina popular,
-no tratamento de afecções parasitárias, mordedura de insetos e dermatoses diversas. As partes
-utilizadas são o leite da casca da planta; as sementes, das quais se obtém um pó; e as folhas, que
-são usadas para fazer chá.",
+        caracteristicas: "É cultivado nos igapós e margens inundáveis de rios na região Amazônica, principalmente no estado do Pará. Árvore de porte médio, podendo atingir 20 m de altura, o abricó se propaga com facilidade por meio de sementes, que germinam entre 12 e 18 dias. A planta pode iniciar a floração a partir de seis/oito anos.",        
+        culinaria: "O fruto é consumido in natura, em forma de salada, licores, compotas, geleias e sucos, ou processado.",
+        curiosidade: "A árvore é empregada na arborização urbana e na medicina popular, no tratamento de afecções parasitárias, mordedura de insetos e dermatoses diversas. As partes utilizadas são o leite da casca da planta; as sementes, das quais se obtém um pó; e as folhas, que são usadas para fazer chá.",
         energia_kcal: "64",
         proteinas_g: "1",
         lipideos_g: "0,3",
