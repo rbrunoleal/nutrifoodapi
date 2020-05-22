@@ -1,5 +1,5 @@
 require 'uri'
-
+require "i18n"
 
 class AlimentosController < ApplicationController 
 	def index
@@ -7,6 +7,7 @@ class AlimentosController < ApplicationController
 		@result = []
 		@alimentos.each do |ali|
 			@novo_alimento = Alimento.new
+			@novo_alimento.id = ali.id
 			@novo_alimento.nome = ali.nome.gsub(/[\n]/, ' ').gsub(/ +/, " ")
 			@novo_alimento.nome_cientifico = ali.nome_cientifico.gsub(/[\n]/, ' ').gsub(/ +/, " ")
 			@novo_alimento.nome_popular = ali.nome_popular.gsub(/[\n]/, ' ').gsub(/ +/, " ")
@@ -29,7 +30,8 @@ class AlimentosController < ApplicationController
 			@novo_alimento.vitb2_mg = ali.vitb2_mg
 			@novo_alimento.niacina_mg = ali.niacina_mg
 			@novo_alimento.vitc_mg = ali.vitc_mg
-			@novo_alimento.imagem = "http://nutrifoodapi.herokuapp.com/images/" + ali.nome + ".PNG" 
+			@imagem_src = I18n.transliterate(ali.nome.gsub(" ", "_").gsub("-", "_"))
+			@novo_alimento.imagem = "http://nutrifoodapi.herokuapp.com/images/" + @imagem_src + ".PNG" 
 			@result.push(@novo_alimento)			
 		end		
 		render json: {status: 'SUCCESS', message:'Alimentos:', data:@result},status: :ok
@@ -40,6 +42,7 @@ class AlimentosController < ApplicationController
 		@result = []
 		@alimentos.each do |ali|
 			@novo_alimento = Alimento.new
+			@novo_alimento.id = ali.id
 			@novo_alimento.nome = ali.nome.gsub(/[\n]/, ' ').gsub(/ +/, " ")
 			@novo_alimento.nome_cientifico = ali.nome_cientifico.gsub(/[\n]/, ' ').gsub(/ +/, " ")
 			@novo_alimento.nome_popular = ali.nome_popular.gsub(/[\n]/, ' ').gsub(/ +/, " ")
@@ -62,7 +65,8 @@ class AlimentosController < ApplicationController
 			@novo_alimento.vitb2_mg = ali.vitb2_mg
 			@novo_alimento.niacina_mg = ali.niacina_mg
 			@novo_alimento.vitc_mg = ali.vitc_mg
-			@novo_alimento.imagem = "http://nutrifoodapi.herokuapp.com/images/" + ali.nome + ".PNG" 
+			@imagem_src = I18n.transliterate(ali.nome.gsub(" ", "_").gsub("-", "_"))
+			@novo_alimento.imagem = "http://nutrifoodapi.herokuapp.com/images/" + @imagem_src + ".PNG"  
 			@result.push(@novo_alimento)			
 		end		
     	render json: {status: 'SUCCESS', message:'Alimento:', data:@result},status: :ok
@@ -83,6 +87,7 @@ class AlimentosController < ApplicationController
 		@result = []
 		@regiao_esp.each do |ali|
 			@novo_alimento = Alimento.new
+			@novo_alimento.id = ali.id
 			@novo_alimento.nome = ali.nome.gsub(/[\n]/, ' ').gsub(/ +/, " ")
 			@novo_alimento.nome_cientifico = ali.nome_cientifico.gsub(/[\n]/, ' ').gsub(/ +/, " ")
 			@novo_alimento.nome_popular = ali.nome_popular.gsub(/[\n]/, ' ').gsub(/ +/, " ")
@@ -105,7 +110,8 @@ class AlimentosController < ApplicationController
 			@novo_alimento.vitb2_mg = ali.vitb2_mg
 			@novo_alimento.niacina_mg = ali.niacina_mg
 			@novo_alimento.vitc_mg = ali.vitc_mg
-			@novo_alimento.imagem = "http://nutrifoodapi.herokuapp.com/images/" + ali.nome + ".PNG" 
+			@imagem_src = I18n.transliterate(ali.nome.gsub(" ", "_").gsub("-", "_"))
+			@novo_alimento.imagem = "http://nutrifoodapi.herokuapp.com/images/" + @imagem_src + ".PNG" 
 			@result.push(@novo_alimento)			
 		end		
     	render json: {status: 'SUCCESS', message:'Alimentos Regiao:', data:@result},status: :ok
@@ -118,6 +124,7 @@ class AlimentosController < ApplicationController
 		@result = []
 		@categoria_esp.each do |ali|
 			@novo_alimento = Alimento.new
+			@novo_alimento.id = ali.id
 			@novo_alimento.nome = ali.nome.gsub(/[\n]/, ' ').gsub(/ +/, " ")
 			@novo_alimento.nome_cientifico = ali.nome_cientifico.gsub(/[\n]/, ' ').gsub(/ +/, " ")
 			@novo_alimento.nome_popular = ali.nome_popular.gsub(/[\n]/, ' ').gsub(/ +/, " ")
@@ -140,7 +147,8 @@ class AlimentosController < ApplicationController
 			@novo_alimento.vitb2_mg = ali.vitb2_mg
 			@novo_alimento.niacina_mg = ali.niacina_mg
 			@novo_alimento.vitc_mg = ali.vitc_mg
-			@novo_alimento.imagem = "http://nutrifoodapi.herokuapp.com/images/" + ali.nome + ".PNG" 
+			@imagem_src = I18n.transliterate(ali.nome.gsub(" ", "_").gsub("-", "_"))
+			@novo_alimento.imagem = "http://nutrifoodapi.herokuapp.com/images/" + @imagem_src + ".PNG" 
 			@result.push(@novo_alimento)			
 		end		
     	render json: {status: 'SUCCESS', message:'Alimentos Categoria:', data:@result},status: :ok
@@ -151,6 +159,7 @@ class AlimentosController < ApplicationController
 		@result = []
 		@categoria_regiao.each do |ali|
 			@novo_alimento = Alimento.new
+			@novo_alimento.id = ali.id
 			@novo_alimento.nome = ali.nome.gsub(/[\n]/, ' ').gsub(/ +/, " ")
 			@novo_alimento.nome_cientifico = ali.nome_cientifico.gsub(/[\n]/, ' ').gsub(/ +/, " ")
 			@novo_alimento.nome_popular = ali.nome_popular.gsub(/[\n]/, ' ').gsub(/ +/, " ")
@@ -173,7 +182,8 @@ class AlimentosController < ApplicationController
 			@novo_alimento.vitb2_mg = ali.vitb2_mg
 			@novo_alimento.niacina_mg = ali.niacina_mg
 			@novo_alimento.vitc_mg = ali.vitc_mg
-			@novo_alimento.imagem = "http://nutrifoodapi.herokuapp.com/images/" + ali.nome + ".PNG" 
+			@imagem_src = I18n.transliterate(ali.nome.gsub(" ", "_").gsub("-", "_"))
+			@novo_alimento.imagem = "http://nutrifoodapi.herokuapp.com/images/" + @imagem_src + ".PNG" 
 			@result.push(@novo_alimento)			
 		end		
     	render json: {status: 'SUCCESS', message:'Alimentos Categoria Regiao:', data:@result},status: :ok
