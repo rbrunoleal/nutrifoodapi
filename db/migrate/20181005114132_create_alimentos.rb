@@ -24,7 +24,6 @@ class CreateAlimentos < ActiveRecord::Migration[5.2]
       t.string :vitc_mg
       t.string :niacina_mg
       t.string :imagem
-      t.timestamps
     end
   end
 end
