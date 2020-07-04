@@ -69,12 +69,12 @@ class AlimentosController < ApplicationController
 	end
 	
 	def categoria
-		categoria = Alimento.order('categoria').select(:categoria).map(&:categoria).uniq
+		categoria = Alimento.order('categoria').select(:categoria).map(&:categoria).uniq.map {|item| item.upcase }
     	render json: {status: 'SUCCESS', message:'Categorias:', data:categoria},status: :ok
 	end
 	
 	def regiao
-		regiao = Alimento.order('regiao').select(:regiao).map(&:regiao).uniq
+		regiao = Alimento.order('regiao').select(:regiao).map(&:regiao.upcase).uniq.map {|item| item.upcase }
     	render json: {status: 'SUCCESS', message:'Regioes:', data:regiao},status: :ok
 	end
 	
