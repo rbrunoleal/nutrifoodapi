@@ -79,7 +79,7 @@ class AlimentosController < ApplicationController
 	end
 	
 	def regiao_especifica
-		@regiao_esp = Alimento.order('nome').where("regiao = :regiao", { regiao: params[:regiao] })
+		@regiao_esp = Alimento.order('nome').select { |x|  x.regiao.upcase.eql? params[:regiao] }		
 		@result = []
 		@regiao_esp.each do |ali|
 			@novo_alimento = Alimento.new
@@ -116,7 +116,7 @@ class AlimentosController < ApplicationController
 	def categoria_especifica
 		ded = URI.decode(params[:categoria]);
 		ded.gsub! '+', ' '
-		@categoria_esp = Alimento.order('nome').where("categoria = :categoria", { categoria: ded })
+		@categoria_esp = Alimento.order('nome').select { |x|  x.categoria.upcase.eql? ded }
 		@result = []
 		@categoria_esp.each do |ali|
 			@novo_alimento = Alimento.new
